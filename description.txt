@@ -1,0 +1,7 @@
+Both the questions are answered in two different mapper classes. Please find the mappers for the questions below:
+
+2. Write a Map Reduce program to calculate the total units sold for each Company----> CompanyMapper
+3. Write a Map Reduce program to calculate the total units sold in each state for Onida company---> StateMapper
+
+
+Two different job id are configured for both the mappers.

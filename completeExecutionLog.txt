@@ -1,0 +1,171 @@
+dgild@localhost Jars]$ hadoop fs -rm -r /user/acadgild/sandeep/session4/CompanyoP /user/acadgild/sandeep/session4/StateoP
+Java HotSpot(TM) Client VM warning: You have loaded library /home/acadgild/hadoop-2.7.2/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
+It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
+17/02/17 00:24:20 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/02/17 00:24:31 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted /user/acadgild/sandeep/session4/CompanyoP
+17/02/17 00:24:31 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted /user/acadgild/sandeep/session4/StateoP
+[acadgild@localhost Jars]$ hadoop fs -cat /user/acadgild/sandeep/session4/StateoP/pa*
+Java HotSpot(TM) Client VM warning: You have loaded library /home/acadgild/hadoop-2.7.2/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
+It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
+17/02/17 00:31:46 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+cat: `/user/acadgild/sandeep/session4/StateoP/pa*': No such file or directory
+[acadgild@localhost Jars]$ hadoop jar CompanyStateMR.jar mapReduce.CompanyStateMR /user/acadgild/sandeep/session4/input /user/acadgild/sandeep/session4/CompanyoP /user/acadgild/sandeep/session4/StateoP
+Java HotSpot(TM) Client VM warning: You have loaded library /home/acadgild/hadoop-2.7.2/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
+It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
+17/02/17 00:32:20 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/02/17 00:32:24 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+17/02/17 00:32:27 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+17/02/17 00:32:28 INFO input.FileInputFormat: Total input paths to process : 1
+17/02/17 00:32:29 INFO mapreduce.JobSubmitter: number of splits:1
+17/02/17 00:32:30 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1486057629046_0019
+17/02/17 00:32:32 INFO impl.YarnClientImpl: Submitted application application_1486057629046_0019
+17/02/17 00:32:33 INFO mapreduce.Job: The url to track the job: http://localhost:8088/proxy/application_1486057629046_0019/
+17/02/17 00:32:33 INFO mapreduce.Job: Running job: job_1486057629046_0019
+17/02/17 00:33:02 INFO mapreduce.Job: Job job_1486057629046_0019 running in uber mode : false
+17/02/17 00:33:02 INFO mapreduce.Job:  map 0% reduce 0%
+17/02/17 00:33:22 INFO mapreduce.Job:  map 100% reduce 0%
+17/02/17 00:33:44 INFO mapreduce.Job:  map 100% reduce 100%
+17/02/17 00:33:45 INFO mapreduce.Job: Job job_1486057629046_0019 completed successfully
+17/02/17 00:33:46 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=78
+		FILE: Number of bytes written=235149
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=871
+		HDFS: Number of bytes written=48
+		HDFS: Number of read operations=6
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=14927
+		Total time spent by all reduces in occupied slots (ms)=19798
+		Total time spent by all map tasks (ms)=14927
+		Total time spent by all reduce tasks (ms)=19798
+		Total vcore-milliseconds taken by all map tasks=14927
+		Total vcore-milliseconds taken by all reduce tasks=19798
+		Total megabyte-milliseconds taken by all map tasks=15285248
+		Total megabyte-milliseconds taken by all reduce tasks=20273152
+	Map-Reduce Framework
+		Map input records=18
+		Map output records=22
+		Map output bytes=238
+		Map output materialized bytes=78
+		Input split bytes=138
+		Combine input records=22
+		Combine output records=6
+		Reduce input groups=6
+		Reduce shuffle bytes=78
+		Reduce input records=6
+		Reduce output records=6
+		Spilled Records=12
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=588
+		CPU time spent (ms)=4480
+		Physical memory (bytes) snapshot=229466112
+		Virtual memory (bytes) snapshot=636796928
+		Total committed heap usage (bytes)=137498624
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=733
+	File Output Format Counters 
+		Bytes Written=48
+17/02/17 00:33:47 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+17/02/17 00:33:47 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+17/02/17 00:33:47 INFO input.FileInputFormat: Total input paths to process : 1
+17/02/17 00:33:47 INFO mapreduce.JobSubmitter: number of splits:1
+17/02/17 00:33:47 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1486057629046_0020
+17/02/17 00:33:47 INFO impl.YarnClientImpl: Submitted application application_1486057629046_0020
+17/02/17 00:33:47 INFO mapreduce.Job: The url to track the job: http://localhost:8088/proxy/application_1486057629046_0020/
+17/02/17 00:33:47 INFO mapreduce.Job: Running job: job_1486057629046_0020
+17/02/17 00:34:14 INFO mapreduce.Job: Job job_1486057629046_0020 running in uber mode : false
+17/02/17 00:34:14 INFO mapreduce.Job:  map 0% reduce 0%
+17/02/17 00:34:31 INFO mapreduce.Job:  map 100% reduce 0%
+17/02/17 00:34:48 INFO mapreduce.Job:  map 100% reduce 100%
+17/02/17 00:34:49 INFO mapreduce.Job: Job job_1486057629046_0020 completed successfully
+17/02/17 00:34:49 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=26
+		FILE: Number of bytes written=235033
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=871
+		HDFS: Number of bytes written=16
+		HDFS: Number of read operations=6
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=14120
+		Total time spent by all reduces in occupied slots (ms)=13277
+		Total time spent by all map tasks (ms)=14120
+		Total time spent by all reduce tasks (ms)=13277
+		Total vcore-milliseconds taken by all map tasks=14120
+		Total vcore-milliseconds taken by all reduce tasks=13277
+		Total megabyte-milliseconds taken by all map tasks=14458880
+		Total megabyte-milliseconds taken by all reduce tasks=13595648
+	Map-Reduce Framework
+		Map input records=18
+		Map output records=3
+		Map output bytes=54
+		Map output materialized bytes=26
+		Input split bytes=138
+		Combine input records=3
+		Combine output records=1
+		Reduce input groups=1
+		Reduce shuffle bytes=26
+		Reduce input records=1
+		Reduce output records=1
+		Spilled Records=2
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=572
+		CPU time spent (ms)=4380
+		Physical memory (bytes) snapshot=229253120
+		Virtual memory (bytes) snapshot=635748352
+		Total committed heap usage (bytes)=137498624
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=733
+	File Output Format Counters 
+		Bytes Written=16
+[acadgild@localhost Jars]$ hadoop fs -cat /user/acadgild/sandeep/session4/StateoP/pa*
+Java HotSpot(TM) Client VM warning: You have loaded library /home/acadgild/hadoop-2.7.2/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
+It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
+17/02/17 00:35:11 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Uttar Pradesh	3
+[acadgild@localhost Jars]$ hadoop fs -cat /user/acadgild/sandeep/session4/CompanyoP/part*
+Java HotSpot(TM) Client VM warning: You have loaded library /home/acadgild/hadoop-2.7.2/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
+It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
+17/02/17 00:36:57 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Akai	1
+Lava	3
+Onida	3
+Pradesh	6
+Samsung	7
+Zen	2
+[acadgild@localhost Jars]$ 
